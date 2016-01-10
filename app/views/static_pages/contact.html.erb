@@ -1,13 +1,40 @@
-<h1>StaticPages#contact</h1>
+<% provide(:title, "Contact") %>
 
+<div class="center jumbotron">
 <p>
-Licensed and insured
-24 hour emergency service
-Send us an email or give us a call anytime!
-comeseethewizard@gmail.com
-(617) 870-4540
-</p>
 
+<style>
+img {
+    float: left;
+    margin: 0 20px 0px 10px;
+}
+</style>
+
+<h3>
+ <%= link_to image_tag("http://www.ozplumbingbrighton.com/uploads/3/4/0/2/3402315/8211994.jpg", alt: "OZ logo"),
+            'http://www.ozplumbingbrighton.com' %> 
+
+ Licensed and insured 
+<h3> 24 hour emergency service </h3> 
+
+<h3>
+Please email us with any questions <a href="mailto:comeseethewizard@gmail.com"> comeseethewizard@gmail.com </a> 
+</h3> <h3>
+ Call us anytime! <a href="tel:+16178704540"> (617) 870-4540 </a> </h3>
+
+
+
+
+
+<%= link_to "Services", 'static_pages/services', class: "btn btn-lg btn-primary" %>
+<%= link_to "Call now!", 'tel:+16178704540', class: "btn btn-lg btn-primary" %>
+
+<br> <br> <br><br>
 <p>
 Specializing in private, residential, and commercial properties, we have the answer to all of your plumbing needs! With more than ten years experience under our tool belt, we guarantee our quality of work will be five-star! 
 <p>
+
+</center>
+</div>
+  </body>
+</html>

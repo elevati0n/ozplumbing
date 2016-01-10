@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OzApp</title>
+  <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
 </head>
+<br> <br>
 <body>
 
-<%= yield %>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+
+      <%= link_to "OZ Plumbing Heating & Gas Fitting", '#', id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+        	<li><%= link_to "Home",   '/' %></li>
+          	<li><%= link_to "Services",   'static_pages/services.html' %></li>
+            <li><%= link_to "1 (617) 870-4540",   'tel:+16178704540' %></li>
+            <li><%= link_to "E-Mail",   'mailto:comeseethewizard@gmail.com' %></li>
+            <li><%= link_to "Google Plus", 'https://plus.google.com/app/basic/local/114408478916881713514/about?gl=us&hl=en' %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <%#= link_to image_tag("http://www.ozplumbingbrighton.com/uploads/3/4/0/2/3402315/8211994.jpg", alt: "OZ logo"),
+            'http://www.ozplumbingbrighton.com' %>
 
 </body>
 </html>
